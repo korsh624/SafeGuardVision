@@ -29,7 +29,10 @@ def determine_posture(landmarks):
     if abs(shoulder_avg_y - hip_avg_y) < 0.1:
         if sended_signal == False:
             sended_signal = True
-            send_signal(state=0)
+            send_signal(state=1)
+        if sended_signal == True:
+            sended_signal = False
+            send_signal(state=1)
 
 
         return 'Lying down'
