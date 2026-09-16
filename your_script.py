@@ -32,7 +32,7 @@ def determine_posture(landmarks):
             send_signal(state=1)
         if sended_signal == True:
             sended_signal = False
-            send_signal(state=1)
+            send_signal(state=0)
 
 
         return 'Lying down'
